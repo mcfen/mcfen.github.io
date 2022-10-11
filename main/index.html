@@ -22,7 +22,7 @@
             var jq = jQuery.noConflict();
         </script>
 </head>
-<body id="nv_forum" class="pg_viewthread" onkeydown="if(event.keyCode==27) return false;">
+<body id="nv_forum" class="pg_viewthread" onkeydown="if(event.keyCode==27) return false;" ondragstart="window.event.returnValue=false" oncontextmenu="if(event.srcElement.type != 'text') return false" onselectstart="event.returnValue=false">
     <div id="body_fixed_bg"></div>
 <div id="append_parent"></div><div id="ajaxwaitid"></div>
 <div id="toptb" class="cl">
@@ -390,26 +390,20 @@ initSearchmenu('scbar', '');
 </tr>
 <tr>
 <th>联系方式</th>
-<td>https://www.mcfen.net  (官网)  请认真查看帖子内容 (Q群帖内查找) </td>
+<td><a href="https://www.mcfen.net" target="_blank">https://www.mcfen.net</a> &nbsp;(官网)  请认真查看帖子内容 (Q群帖内查找) </td>
 </tr>
 <tr>
 <th>服务器IP/域名</th>
-<td><a href="javascript:;" onmouseover="showMenu({'ctrlid':this.id, 'pos':'4'})" onclick="copyip();" id="server_ip">mcfen.net</a></td>
+<td><a href="https://520.mcfen.net/server" target="_blank" title="点击使用">mcfen.net</a></td>
 </tr>
 </tbody>
 </table>
-<div id="server_ip_menu" class="tip" style="display: none;">点击复制到剪贴板</div>
-<script lang="text/javascript">
-function copyip(){
-setCopy($('server_ip').text);
-alert('已复制到剪贴板');
-}
-</script>
+
 </div>
 
 <div class="t_fsz">
 <style type="text/css">#pid12326685{background-image:url("static/image/postbg/bg2.png");}</style><table cellspacing="0" cellpadding="0"><tr><td class="t_f" id="postmessage_12326685">
-<i class="pstatus"> 本帖最后由 梦里幽境 于 2022-9-27 15:15 编辑 </i><br />
+<i class="pstatus"> 本帖最后由 梦里幽境 于 2022-10-11 14:12 编辑 </i><br />
 <div align="center"><div align="center"><a onclick="window.open('https://www.mcfen.net')"><img id="aimg_Pzzc7" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" width="300" height="210" file="https://mcfen-free.oss-cn-hongkong.aliyuncs.com/publicize/bbs/logo_2022.6.png" border="0" alt="" /></a><br />
 </div></div><div align="center"><font style="background-color:rgb(251, 242, 219)"><font face="&amp;quot;"><table cellspacing="0" class="t_table" style="width:520px" bgcolor="black"><tr><td><table cellspacing="0" class="t_table" style="width:415px" bgcolor="#dedede"><tr><td><table cellspacing="0" class="t_table" style="width:510px" bgcolor="SlateGray"><tr><td><table cellspacing="0" class="t_table" style="width:500px" bgcolor="LightBlue"><tr><td><div align="center"><font face="Arial"><font size="5"><strong><font color="#4169e1">梦里幽境</font> - 群组服</strong></font></font></div></td></tr></table></td></tr></table><br />
 <div align="center"><div align="center"><div align="center"><strong>-----------------------------------------------------------------------</strong></div><div align="center"><font size="4"><font color="#008000"><strong>那年初夏 掠过飞逝的青春 你那远去的背影深埋于心海</strong></font></font></div><div align="center"><strong>-----------------------------------------------------------------------</strong></div><div align="center"><strong><font face="Helvetica"><font size="3"><font color="#4169e1">思念你 在梦里 散不去</font></font></font></strong></div></div></div></td></tr></table></td></tr></table></font></font></div><br />
@@ -430,7 +424,10 @@ alert('已复制到剪贴板');
               allowfullscreen=""></IFRAME>
 			  </DIV></TD></TR></TBODY></TABLE></DIV>
 <br />
-</div><br />
+</div>
+<div align="center"> <a href="https://www.bilibili.com/video/BV1UF411s78y" target="_blank"><font size="4"><font color="#ff0000"><strong>直接前往B站查看</strong></font></font></a></div>
+<br />
+
 <div align="center"><img id="aimg_XIn5i" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="https://mcfen-free.oss-cn-hongkong.aliyuncs.com/publicize/bbs/mcfen_02.png" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" /><br />
 </div><div align="center"><img id="aimg_PTneT" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="https://mcfen-free.oss-cn-hongkong.aliyuncs.com/publicize/bbs/mcfen_03.png" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" /><br />
 </div><div align="center"><a onclick="window.open('https://520.mcfen.net/dear_friend/support')"><img id="aimg_lTCCg" onclick="zoom(this, this.src, 0, 0, 0)" class="zoom" file="https://mcfen-free.oss-cn-hongkong.aliyuncs.com/publicize/bbs/mcfen_04.png" onmouseover="img_onmouseoverfunc(this)" lazyloadthumb="1" border="0" alt="" /></a><br />
@@ -603,7 +600,7 @@ alert('已复制到剪贴板');
 
 
 <div>
-<div style="padding:5px;text-align:center;margin-top:10px;color:#00A2D2;"><b>帖子永久链接：</b><input type="text" value="https://www.mcfen.net/main" size="40" class="px" readonly="readonly" style="vertical-align:middle;">&nbsp;<button type="submit" class="pn"><em>点击复制</em></button></div><br /><fieldset style="border:1px dashed #FF0000;padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;">
+<div style="padding:5px;text-align:center;margin-top:10px;color:#00A2D2;"><b>帖子永久链接：</b><input type="text" value="https://www.mcfen.net/main"  size="40" class="px" readonly="readonly" style="vertical-align:middle;">&nbsp;<button type="submit" class="pn"><em>需手动复制</em></button></div><br /><fieldset style="border:1px dashed #FF0000;padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;">
 <legend align="center" style="color:#FFFFFF;width:200px;text-align:center;background-color:#FF0000;">Minecraft梦里幽境 - 内容版权</legend>
 1、本主题所有言论和图片属梦里幽境管理员个人言论，属于个人立场<br />
 2、本站所有主题由梦里幽境服务器管理员发表，帖子作者享有帖子相关版权<br />
@@ -756,13 +753,11 @@ new lazyload();
 
 </div>
 
-    <!--框背景的底部-->
 
     </div>
     </div>
     <div class="mc_map_border_foot"></div>
     </div>
-    <!--整个主体div结束-->
     <style type="text/css">
         #ft {padding: 10px 0 20px;line-height: 1.8;color: #fff;border:none;font-size:14px;}
         #ft a {color:#fff;font-size:14px;}
