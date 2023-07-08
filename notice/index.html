@@ -13,7 +13,7 @@
 		<script src="https://mcfen-free.oss-cn-hongkong.aliyuncs.com/publicize/web/notice/js/jquery.min.js"></script>
 		<script src="https://mcfen-free.oss-cn-hongkong.aliyuncs.com/publicize/web/notice/js/bootstrap.min.js"></script>
 		
-	<body>
+	<body onkeydown="if(event.keyCode==27) return false;" ondragstart="window.event.returnValue=false" oncontextmenu="if(event.srcElement.type != 'text') return false" onselectstart="event.returnValue=false">
 		<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
 			<div  class="container">
 				<div  class="navbar-header">
